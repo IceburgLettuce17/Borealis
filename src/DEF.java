@@ -42,11 +42,15 @@ interface DEF
 	final static int     SCR_H  		= 204;
 
 	//////////////////////////////////////////////////
-	// Workarounds for some issues...
+	// Workarounds for some issues... And some configs
 
 	final static boolean bClippingBug	= false;
 	final static boolean bStreamReadBug	= false;
 	final static boolean bMotorolaV300	= true;
+	final static boolean bSleepInsteadOfYield = true;
+	final static boolean bCallSerially = false;
+	static final boolean bServiceRepaints = true;
+	static final boolean bDisableNotifyDestroyed = false;
 
 	//////////////////////////////////////////////////
 

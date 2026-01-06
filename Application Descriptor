@@ -1,0 +1,7 @@
+MIDlet-1: BorealisDemoGame,,BorealisDemoGame
+MIDlet-Jar-URL: Borealis.jar
+MIDlet-Name: Borealis Demo Application
+MIDlet-Vendor: Borealis Team
+MIDlet-Version: 1.0.0
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.1

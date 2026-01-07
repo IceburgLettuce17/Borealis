@@ -196,7 +196,7 @@ public abstract class AGame extends GameCanvas implements Runnable {
             final long elapsedTime = System.currentTimeMillis() - AGame.s_game_lastFrameTime;
             AGame.s_game_lastFrameTime = System.currentTimeMillis();
             if (elapsedTime > DEF.FAKE_INTERRUPT_TH && AGame.s_game_lastFrameTime != 0L) {
-                this.Pause();
+                Pause();
                 this.Resume();
             }
         }
@@ -256,7 +256,7 @@ public abstract class AGame extends GameCanvas implements Runnable {
 		return false;
 	}
 	
-    protected void Pause() {
+    protected static void Pause() {
         s_game_isPaused = true;
         DBG.Log("AGame.pause");
         /*if (GLLibConfig.sound_useStopSoundsOnInterrupt) {

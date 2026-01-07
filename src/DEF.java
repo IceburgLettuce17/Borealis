@@ -38,8 +38,10 @@ interface DEF
 	final static boolean LIMIT_FPS		= true; 	// limit framerate
 	final static int 	 MAX_FPS		= 14;		// maximum fps (if limited)
 
-	final static int     SCR_W   		= 176;
-	final static int     SCR_H  		= 204;
+	final static int     SCR_W   		= 800;
+	final static int     SCR_H  		= 480;
+	
+	final static boolean bDumpConfig	= true;		// dump values
 
 	//////////////////////////////////////////////////
 	// Workarounds for some issues... And some configs
@@ -51,6 +53,10 @@ interface DEF
 	final static boolean bCallSerially = false;
 	static final boolean bServiceRepaints = true;
 	static final boolean bDisableNotifyDestroyed = false;
+	static final boolean bUseFakeInterruptHandling = true;
+	static final boolean bUseFrameDT				= true;
+	final static int LOW_MEMORY_LIMIT = 0;
+	static final int FAKE_INTERRUPT_TH = 3250;
 
 	//////////////////////////////////////////////////
 

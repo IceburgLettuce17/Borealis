@@ -17,24 +17,16 @@ public final class Game extends AGame implements Runnable
 	 */
 	public static String _sVersion;
 
+	public static ASprite font;
+
 	public Game(BorealisDemoGame game) {
-		super(false);
+		super(s_application, s_display);
 		
 	}
 
-	public void run() {
-		// TODO Auto-generated method stub
-		
+	void Game_update() {
+		g.drawString("Hello World!", 1, 1, 0);
 	}
 
-	protected void paint(Graphics arg0) {
-		// TODO Auto-generated method stub
-
-	}
-
-	public static void Pause() {
-		// TODO Auto-generated method stub
-		
-	}
 
 }

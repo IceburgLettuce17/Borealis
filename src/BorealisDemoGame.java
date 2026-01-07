@@ -12,6 +12,7 @@ public final class BorealisDemoGame extends MIDlet {
 	public BorealisDemoGame() {
 		s_gameVer = getAppProperty("MIDlet-Version");
 		m_game = new Game(this);
+		Game._sVersion = s_gameVer;
 	}
 
 	protected void destroyApp(boolean unconditional) throws MIDletStateChangeException {

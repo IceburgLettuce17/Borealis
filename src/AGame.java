@@ -21,6 +21,19 @@ public abstract class AGame extends GameCanvas implements Runnable {
 
         // set the display object
         s_display = (Display) display;
+        
+        try {
+			s_isGLEmu = Class.forName("com.gameloft.aurora.BitmapFont") != null;
+		} catch (ClassNotFoundException e) {
+			DBG.Log("Is not GLEmulator");
+			e.printStackTrace();
+		}
+        try {
+			s_is_kEmNNMod = Class.forName("emulator.Emulator") != null;
+		} catch (ClassNotFoundException e) {
+			DBG.Log("Is not KEmulator");
+			e.printStackTrace();
+		} 
 	}
 	
     protected void SetupDisplay() {
@@ -100,6 +113,9 @@ public abstract class AGame extends GameCanvas implements Runnable {
     static private Graphics s_lastPaintGraphics = null;
     
     static long s_game_keyPressedTime;
+    
+    static boolean s_isGLEmu,
+    s_is_kEmNNMod;
     
 	//------------------------------------------------------------------------------
     //Function to be implemented in every game.
@@ -250,7 +266,7 @@ public abstract class AGame extends GameCanvas implements Runnable {
 	{
 		// GLEmulator
 		try {
-			return Class.forName("com.gameloft.aurora.BitmapFont") != null || Class.forName("emulator.Emulator") != null;
+			return s_isGLEmu || Class.forName("emulator.Emulator") != null;
 			
 		} catch (ClassNotFoundException e) {}
 		return false;

@@ -11,7 +11,6 @@
 
 interface DEF
 {
-	final static boolean bOnline		= true; 	// multiplayer code
 	final static boolean bEmu			= AGame.IsEmulator();	// emulator
 	final static boolean bRelease		= true; 	// release version
 	final static boolean bSnd 			= !true; 	// sound suport enable
@@ -25,8 +24,6 @@ interface DEF
 	final static boolean bDbgM 			= !false;	// debug out for memory
 	final static boolean bDbgS 			= false;	// debug out for cSprite.Load()
 	final static boolean bDbgI			= false;	// debug out for images (cached sprites)
-
-	final static boolean bDbgMp			= false;	// debug out for multiplayer
 
 	final static boolean DbgDrawFPS		= false;	// shows the FPS
 	final static boolean DbgDrawMem		= false;	// shows the free memory

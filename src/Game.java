@@ -21,6 +21,14 @@ public final class Game extends AGame implements Runnable
 
 	public Game(BorealisDemoGame game) {
 		super(s_application, s_display);
+		if (s_isGLEmu)
+		{
+			DBG.Log("GLEmulator!");
+		}
+		if (s_is_kEmNNMod)
+		{
+			DBG.Log("KEmulator!");
+		}
 		
 	}
 
